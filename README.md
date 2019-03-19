@@ -23,9 +23,9 @@ The `hydro-data` spreadsheet contains all the hydrodynamics experiment data prov
 Terminal commands for running each program are given below. See the comments in each Python file for more information.
 
 ```bash
-# plot different pressure and save stats. to file
-# valid process gas arguments are low, mid, high
-# valid diff. pressure arguments pdit700, pdit704, pdit705, pdit706, pdit707
+# plot pressures and save stats to csv file
+# 1st argument low, mid, or high
+# 2nd argument pdit700, pdit704, pdit705, pdit706, or pdit707
 $ python dp_cat.py low pdit700
 
 # plot different pressure for max catalyst flow
@@ -39,6 +39,12 @@ $ python p_atm.py
 
 # process the original experimental data and save to file
 $ python process_hydro.py
+
+# plot temperatures from thermocouples
+# 1st argument low, mid, or high
+# 2nd argument te709c, te709b, te709a, te707c, te707b, te707a, te705, or te701
+$ python temp_cat.py mid te709c
+$ python temp_cat.py high te705
 ```
 
 ## License
